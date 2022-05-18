@@ -1,11 +1,11 @@
-import Cart from './cart'
+import Cart from '@/page/Cart'
 import {
   Tacos,
   Bus
-} from '@components/subRouter/tacos'
-import StyledComponentTest from '@components/styledComponents/test'
-import EmotionTest from '@components/emotion/index'
-import Counter from '@/counter'
+} from '@/components/SubRouter/tacos'
+import StyledComponentTest from '@/components/StyledComponents/test'
+import EmotionTest from '@/components/Emotion/index'
+import Counter from '@/page/Counter'
 
 // title用于目录生成
 export const routes = [

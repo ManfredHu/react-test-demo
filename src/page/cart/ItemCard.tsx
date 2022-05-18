@@ -1,5 +1,5 @@
 import React from "react"
-import { CartItem } from "./"
+import { CartItem } from "./index"
 import { OnCheckedChange } from './use-checked'
 import { Typography } from "antd"
 
