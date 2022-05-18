@@ -4,12 +4,17 @@ import {
   Bus
 } from '@components/subRouter/tacos'
 import StyledComponentTest from '@components/styledComponents/test'
+import EmotionTest from '@components/emotion/index'
+
+// title用于目录生成
 export const routes = [
   {
     path: "/cart",
-    component: Cart
+    component: Cart,
+    title: 'cart购物车'
   },
   {
+    title: '子路由',
     path: "/tacos",
     component: Tacos,
     routes: [
@@ -24,7 +29,13 @@ export const routes = [
     ]
   },
   {
+    title: 'StyledComponent',
     path: "/stylecomp",
     component: StyledComponentTest
+  },
+  {
+    title: 'emotion',
+    path: '/emotion',
+    component: EmotionTest
   }
 ];

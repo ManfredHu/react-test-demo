@@ -25,25 +25,22 @@ export function RouteWithSubRoutes(route: any) {
 }
 
 function App() {
+  const Menu = (
+    <ul>
+      {
+        routes.map((item, idx) => (
+          <li key={'menu' + idx}>
+            <Link to={item.path}>{item.title}</Link>
+          </li>
+        ))
+      }
+    </ul>
+  )
   return (
     <div className="App">
       <Router>
         <div>
-          <ul>
-            <li>
-              <Link to="/">Index</Link>
-            </li>
-            <li>
-              <Link to="/cart">cart购物车</Link>
-            </li>
-            <li>
-              <Link to="/tacos">子路由</Link>
-            </li>
-            <li>
-              <Link to="/stylecomp">StyledComponent</Link>
-            </li>
-          </ul>
-
+          { Menu }
           <Switch>
             {routes.map((route, i) => (
               <RouteWithSubRoutes key={i} {...route} />
