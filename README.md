@@ -1,6 +1,6 @@
 
 # 2022 React + React Router + Redux + emotion 测试示例项目
-本项目适合：了解最新React生态，包括hook，新redux，样式解决方案styled-components和emotion等的童鞋
+本项目适合：了解最新React生态，包括hook，新redux，样式解决方案styled-components+emotion+tailwindcss等的童鞋
 ## 项目划分
 ### 购物车 src/page/Cart 
 购物车项目，基本的hook使用
@@ -53,7 +53,8 @@ history.replace('/posts/2'); // redirect
 ## Style
 - [styled-components](https://styled-components.com/docs/basics#installation)
 - [emotion](https://emotion.sh/docs/introduction)
-
+- [tailwindcss](https://tailwindcss.com/docs/guides/create-react-app)
+  - react-scripts v3.x不报错，但是tailwindcss也不生效，升级到react-scripts v5.x可以
 ## redux
 
 ### 本地数据

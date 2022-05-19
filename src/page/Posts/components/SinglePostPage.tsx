@@ -1,6 +1,8 @@
-import React from 'react'
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react'
 import { useSelector } from 'react-redux'
-import { RouteComponentProps, useHistory } from 'react-router-dom'
+import { Link, RouteComponentProps, useHistory } from 'react-router-dom'
 import type {
   PostsState
 } from '../store/postSlice'
@@ -24,9 +26,16 @@ export const SinglePostPage = (routeProps: RouteComponentProps<{postId: string}>
 
   return (
     <section>
-      <article className="post">
+      <article className="post" css={css({
+        display: 'flex',
+        flexDirection: 'column'
+      })}>
         <h2>{post.title}</h2>
         <p className="post-content">{post.content}</p>
+        <Link to={`/editPost/${post.id}`} className="button">
+          Edit Post
+        </Link>
+
         <button onClick={history.goBack}>return back</button>
       </article>
     </section>

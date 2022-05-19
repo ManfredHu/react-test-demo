@@ -1,7 +1,7 @@
 import React from 'react';
 import { routes } from './router';
 import './App.css';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import {
   BrowserRouter as Router,
   Switch,
