@@ -21,6 +21,8 @@
 ## React Router
 文档 https://v5.reactrouter.com/web/example/route-config
 
+> Maybe React-Router不是最简洁的方案了，hook写法可以看[router5](https://github.com/router5/router5)
+
 子路由 `src/components/subRouter`
 
 JSX
