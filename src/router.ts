@@ -10,12 +10,13 @@ import Counter from '@/page/Counter'
 import PostsListPage from '@/page/Posts'
 import { EditPostForm } from './page/Posts/components/EditPostForm';
 import TailwindCss from './components/TailwindCss';  
+
 // title用于目录生成
 export const routes = [
   {
     path: "/cart",
     component: Cart,
-    title: 'cart购物车'
+    title: 'cart购物车',
   },
   {
     title: '子路由',
@@ -70,3 +71,5 @@ export const routes = [
     exact: true
   }
 ];
+
+export type routesItemType = typeof routes[number];
