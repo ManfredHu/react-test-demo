@@ -1,8 +1,8 @@
 
-# 2022 React + React Router + Redux 测试示例项目
-
+# 2022 React + React Router + Redux + emotion 测试示例项目
+本项目适合：了解最新React生态，包括hook，新redux，样式解决方案styled-components和emotion等的童鞋
 ## 项目划分
-### src/page/Cart
+### 购物车 src/page/Cart 
 购物车项目，基本的hook使用
 
 - [x] useReducer 方法router，比如对同个数据的增删查改
@@ -13,7 +13,7 @@
   - [ ] hook数据如何跨父子组件，兄弟组件共享
   - [ ] hook适用在哪些地方？跟redux对比如何
 
-### src/page/Counter
+### 计算器 src/page/Counter
 计算器项目，主要是给redux+toolkit使用
 
 - [ ] [React Query](https://react-query.tanstack.com/overview)，查阅 https://www.infoq.cn/article/9abcwvioiccvmio5xdxy
@@ -22,6 +22,33 @@
 文档 https://v5.reactrouter.com/web/example/route-config
 
 子路由 `src/components/subRouter`
+
+JSX
+```JSX
+// https://v5.reactrouter.com/web/api/Link/to-string
+<Link to="/b">
+  <div>点击跳转到b</div>
+</Link>
+
+// https://v5.reactrouter.com/web/api/Redirect
+<Redirect to="/somewhere/else" />
+<Redirect
+  to={{
+    pathname: "/login",
+    search: "?utm=your+face",
+    state: { referrer: currentLocation }
+  }}
+/>
+<Redirect push to="/somewhere/else" />
+```
+
+```JS
+import { useHistory } from 'react-router-dom'
+const history = useHistory();
+history.push('/posts/1'); // jump
+history.replace('/posts/2'); // redirect
+<button onClick={history.goBack}>return back</button> // 返回上一页
+```
 
 ## Style
 - [styled-components](https://styled-components.com/docs/basics#installation)
@@ -106,7 +133,7 @@ import {
 } from './store/counterSlice';
 import { useAppSelector, useAppDispatch } from '@/hooks/hooks';
 
-const count = useAppSelector(selectCount);
+const count = useAppSelector(selectCount); // 注意这里会触发重新渲染
 const dispatch = useAppDispatch();
 dispatch(increment()) // dispatch action
 

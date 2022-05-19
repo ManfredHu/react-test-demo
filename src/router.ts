@@ -1,3 +1,4 @@
+import { SinglePostPage } from './page/Posts/components/SinglePostPage';
 import Cart from '@/page/Cart'
 import {
   Tacos,
@@ -6,6 +7,7 @@ import {
 import StyledComponentTest from '@/components/StyledComponents/test'
 import EmotionTest from '@/components/Emotion/index'
 import Counter from '@/page/Counter'
+import PostsListPage from '@/page/Posts'
 
 // title用于目录生成
 export const routes = [
@@ -40,8 +42,19 @@ export const routes = [
     component: EmotionTest
   },
   {
-    title: 'redux',
+    title: 'redux计数器',
     path: '/redux',
     component: Counter
+  },
+  {
+    title: 'postslist',
+    path: '/postslist',
+    component: PostsListPage
+  },
+  {
+    title: 'post',
+    path: '/posts/:postId',
+    component: SinglePostPage,
+    exact: true
   }
 ];
