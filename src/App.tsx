@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { routes } from "./router";
 import "./App.css";
 import "antd/dist/antd.min.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Layout } from "antd";
 import Sidebar from './Sidebar';
 import {
